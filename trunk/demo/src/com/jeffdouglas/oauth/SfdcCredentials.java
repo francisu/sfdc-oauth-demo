@@ -7,7 +7,7 @@ package com.jeffdouglas.oauth;
  */
 public class SfdcCredentials {
   
-  public static String SFDC_USERNAME = "jeff@jeffdouglas.com";
-  public static String SFDC_PASSWORD = "rTeU886@!FNHX1jAwrxfAd1CYHlFzV1sOh";
+  public static String SFDC_USERNAME = "YOUR_SFDC_USERNAME";
+  public static String SFDC_PASSWORD = "YOUR_SFDC_PASSWORD";
 
 }
