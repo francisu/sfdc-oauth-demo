@@ -82,10 +82,10 @@ public class ConnectionManager {
       // if a session does not exist in the cache  
       } else {
         
-        // if the app has been authenticated but no session. Request a new session with tokens from db.
-        if (hasBeenAuthenticated()) {
+        // if the app has been authorized but no session. Request a new session with tokens from db.
+        if (hasBeenAuthorizeded()) {
           
-          log.info("Authenticated but no Salesforce session...");
+          log.info("Authorized but no Salesforce session...");
           
           // fetch the tokens from the database
           PersistenceManager pm = PMF.getPersistenceManager();
@@ -155,7 +155,7 @@ public class ConnectionManager {
   }
   
   // searches db to determine if app has been authrozied
-  public Boolean hasBeenAuthenticated() {
+  public Boolean hasBeenAuthorizeded() {
     
     PersistenceManager pm = PMF.getPersistenceManager();
     String query = "select from " + AccessCredentials.class.getName();

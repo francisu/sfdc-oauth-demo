@@ -27,7 +27,7 @@ public class HomeServlet extends HttpServlet {
 
     ConnectionManager connection = ConnectionManager.getConnectionManager();
 
-    req.setAttribute("isAuthorized", connection.hasBeenAuthenticated());
+    req.setAttribute("isAuthorized", connection.hasBeenAuthorizeded());
     RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(
         "/home.jsp");
 
